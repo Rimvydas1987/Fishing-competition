@@ -73,18 +73,18 @@ function App() {
         return (
             <>
             <div>
-                <div>
+                <div className="registrationBoard">
                     <div>
-                        <span>Name: </span>
-                        <input type="text" value={nameInput} onChange={nameInputHandler}/>
+                        <span className="participantsText">Name: </span>
+                        <input className="participantsInput" type="text" value={nameInput} onChange={nameInputHandler}/>
                     </div>
-                        <span>Surname: </span>
-                        <input type="text" value={surnameInput} onChange={surnameInputHandler}/>
+                        <span className="participantsText">Surname: </span>
+                        <input className="participantsInput" type="text" value={surnameInput} onChange={surnameInputHandler}/>
                     <div>
-                        <span>Fishing Club: </span>
-                        <input type="text" value={fishingClubInput} onChange={fishingClubInputHandler}/>
+                        <span className="participantsText">Fishing Club: </span>
+                        <input className="participantsInput" type="text" value={fishingClubInput} onChange={fishingClubInputHandler}/>
                     </div>
-                    <button className="input-button" onClick={()=>addParticipant()}>Add Participants</button>
+                    <button className="addParticipants-button" onClick={()=>addParticipant()}>Add Participants</button>
                 </div>
                 <div className="">
                     <div className="">

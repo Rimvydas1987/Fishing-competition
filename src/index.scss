@@ -51,9 +51,6 @@ code {
   justify-content: center;
 }
 
-
-
-
 .delete-button{
   width: 100px;
   height: 30px;
@@ -79,9 +76,6 @@ code {
   transform: translateY(4px);
 }
 
-
-
-
 .edit-button{
   width: 100px;
   height: 30px;
@@ -106,14 +100,6 @@ code {
   transform: translateY(4px);
 }
 
-
-
-
-
-
-
-
-
 .addCatch-button {
   width: 40px;
   height: 30px;
@@ -135,4 +121,46 @@ code {
   background-color: rgba(1, 1, 139, 0.993);
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.479);
   transform: translateY(4px);
+}
+
+.addParticipants-button {
+  width: 150px;
+  height: 30px;
+  background-color: rgba(4, 4, 255, 0.993);
+  border: solid 1px black;
+  border-radius: 5px;
+  cursor: pointer;
+  font-style: italic;
+  font-weight: bold;
+  margin-left: 85px;
+  margin-top: 10px;
+  outline: none;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.479);
+}
+.addParticipants-button:hover {
+  background-color: rgba(3, 3, 184, 0.993);
+}
+.addParticipants-button:active {
+  background-color: rgba(1, 1, 139, 0.993);
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.479);
+  transform: translateY(4px);
+}
+
+.participantsInput {
+  float: right;
+  border-radius: 5px;
+  border: 1px solid black;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.479);
+  padding: 2px;
+  text-align: center;
+}
+.participantsText {
+  float: left;
+  display: contents;
+  font-weight: bold;
+  font-style: italic;
+}
+.registrationBoard {
+  margin: 30px 40px 30px 40px;
+  width:310px;
 }
