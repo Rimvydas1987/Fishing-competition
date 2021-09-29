@@ -8,13 +8,15 @@ import React, {useState} from 'react';
         }
 
         return (  
-            <div className = "">
-                <span className = "text">{props.name} {props.surname} total catch: {props.catch} kg</span>
-                <button className = "main-button" onClick={()=>props.delete(props.id)}>delete</button>
-                {/* <button className = "main-button" onClick={()=>props.edit(props.id)}>reset</button> */}
-                <div className = "">
-                    <input className="updateInput" type="number" value={editInput} onChange={editInputHandler}/>
-                    <button className="input-buttonSmallUpdate" onClick={()=>props.change(props.id, editInput)}>add weight</button>
+            <div className = "background">
+                <span className = "text">{props.name} {props.surname} Fishing Club: {props.club} </span>
+                <span className = "text">total catch: {props.catch} kg</span>
+                <input className="updateInput" type="number" value={editInput} onChange={editInputHandler}/>
+                <span className = "text">g</span>
+                <button className="input-buttonSmallUpdate" onClick={()=>props.change(props.id, editInput)}>add weight</button>
+                <div>
+                    <button className = "delete-button" onClick={()=>props.delete(props.id)}>delete</button>
+                    {/* <button className = "main-button" onClick={()=>props.edit(props.id)}>reset</button> */}
                 </div>
             </div>);
 }  
