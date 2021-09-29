@@ -19,22 +19,120 @@ code {
     monospace;
 }
 .background {
-  margin: 15px;
-  background-color: #6969699a;
+  width: 328px;
+  height: 130px;
+  margin: 30px;
+  background-color: #0c23f59a;
   border: 1px solid black;
-  width: 430px;
-  height: 70px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.479);
 }
+
+.catch-input {
+  width: 55px;
+  height: 20px;
+  margin-top: 4px;
+  border-radius: 5px;
+  border: 1px solid black;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.479);
+}
+.text{
+  font-weight: bold;
+  font-style: italic;
+  margin: 5px;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+}
+.line {
+  margin-top: -5px;
+  display: flex;
+  justify-content: center;
+}
+
+
+
 
 .delete-button{
   width: 100px;
   height: 30px;
   background-color: red;
   border: solid 1px black;
-  border-radius: 5%;
+  border-radius: 5px;
   cursor: pointer;
   font-style: italic;
+  font-weight: bold;
+  margin-top: 5px;
+  float: left;
+  margin-left: 35px;
+
+  outline: none;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.479);
 }
-.catch-input{
+.delete-button:hover {
+  background-color: #cf0202fb;
+}
+.delete-button:active {
+  background-color: #9e0202fb;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.479);
+  transform: translateY(4px);
+}
+
+
+
+
+.edit-button{
+  width: 100px;
+  height: 30px;
+  background-color: rgba(1, 184, 1, 0.993);
+  border: solid 1px black;
+  border-radius: 5px;
+  cursor: pointer;
+  font-style: italic;
+  font-weight: bold;
+  margin-top: 5px;
+  float: right;
+  margin-right: 35px;
+  outline: none;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.479);
+}
+.edit-button:hover {
+  background-color: rgb(3, 155, 3);
+}
+.edit-button:active {
+  background-color: rgb(3, 114, 3);
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.479);
+  transform: translateY(4px);
+}
+
+
+
+
+
+
+
+
+
+.addCatch-button {
   width: 40px;
+  height: 30px;
+  background-color: rgba(4, 4, 255, 0.993);
+  border: solid 1px black;
+  border-radius: 5px;
+  cursor: pointer;
+  font-style: italic;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-top: 2px;
+  outline: none;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.479);
+}
+.addCatch-button:hover {
+  background-color: rgba(3, 3, 184, 0.993);
+}
+.addCatch-button:active {
+  background-color: rgba(1, 1, 139, 0.993);
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.479);
+  transform: translateY(4px);
 }

@@ -9,14 +9,18 @@ import React, {useState} from 'react';
 
         return (  
             <div className = "background">
-                <span className = "text">{props.name} {props.surname} Fishing Club: {props.club} </span>
-                <span className = "text">total catch: {props.catch} kg</span>
-                <input className="updateInput" type="number" value={editInput} onChange={editInputHandler}/>
-                <span className = "text">g</span>
-                <button className="input-buttonSmallUpdate" onClick={()=>props.change(props.id, editInput)}>add weight</button>
+                <span className = "text flex">{props.name} {props.surname}</span>
+                <span className = "text flex">Fishing Club: {props.club} </span>
+                <span className = "text flex">Total catch: {props.catch} kg</span>
+                <div className="line">
+                    <span className = "text">Add Weight: </span>
+                    <input className="catch-input" type="number" value={editInput} onChange={editInputHandler}/>
+                    <span className = "text">g</span>
+                    <button className="addCatch-button" onClick={()=>props.change(props.id, editInput)}>add</button>
+                </div>
                 <div>
                     <button className = "delete-button" onClick={()=>props.delete(props.id)}>delete</button>
-                    {/* <button className = "main-button" onClick={()=>props.edit(props.id)}>reset</button> */}
+                    <button className = "edit-button" onClick={()=>props.edit(props.id)}>edit</button>
                 </div>
             </div>);
 }  
