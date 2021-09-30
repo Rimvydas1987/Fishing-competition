@@ -59,7 +59,6 @@ function App() {
         localStorage.setItem('allParticipants', JSON.stringify(participantsCopy));
     }
 
-
     const nameInputHandler = (e) => {
         setNameInput(e.target.value)
     }
