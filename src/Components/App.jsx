@@ -37,7 +37,7 @@ function App() {
     const changeWeight = (id, weight) => {
         const participantsCopy = participants.slice();
         for(let i = 0; i < participantsCopy.length; i++){
-            if (participantsCopy[i].id == id) {
+            if (participantsCopy[i].id === id) {
                 participantsCopy[i].catchWeight += parseInt(weight)/1000;
 
                 break;
@@ -52,7 +52,7 @@ function App() {
         setOpen(0);
         const participantsCopy = participants.slice();
         for(let i = 0; i < participantsCopy.length; i++){
-            if (participantsCopy[i].id == id) {
+            if (participantsCopy[i].id === id) {
                 participantsCopy.splice(i, 1);
                 break;
             }
@@ -64,7 +64,7 @@ function App() {
     const change = (id, name, surname, fishingClub) => {
         const participantsCopy = participants.slice();
         for(let i = 0; i < participantsCopy.length; i++){
-            if (participantsCopy[i].id == id) {
+            if (participantsCopy[i].id === id) {
                 participantsCopy[i].name = name;
                 participantsCopy[i].fishingClub = fishingClub;
                 participantsCopy[i].surname = surname;
@@ -74,7 +74,6 @@ function App() {
         setParticipants(participantsCopy)
         localStorage.setItem('allParticipants', JSON.stringify(participantsCopy));
     }
-
 
     const nameInputHandler = (e) => {
         setNameInput(e.target.value)
@@ -115,7 +114,7 @@ function App() {
                         </div>
                     </div>
                 </div>
-                <Edit className = "" id={open} close={closeEdit} erase={deleteFisherman} /* name={writeName} surname={writeSurname} club={writeFishingClub}*/ save={change}></Edit>
+                <Edit className = "" id={open} close={closeEdit} erase={deleteFisherman}  save={change}></Edit>
             </>
         );
     }
