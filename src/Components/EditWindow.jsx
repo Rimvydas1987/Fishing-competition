@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-    function Edit ({id, name, surname, club, erase, close, save}) {
+    function Edit ({id, erase, close, save}) {
 
         const [editName, setEditName] = useState('');
         const [editSurname, setEditSurname] = useState('');
@@ -23,7 +23,7 @@ import React, {useState} from 'react';
                 <div className="line">
                     <span className = "text flex">Name: </span>
                     <input className="catch-input" type="text" value={editName} onChange={editNameInputHandler}/>
-                    <span className = "text flex">Surame: </span>
+                    <span className = "text flex">Surname: </span>
                     <input className="catch-input" type="text" value={editSurname} onChange={editSurnameInputHandler}/>
                     <span className = "text flex">Fishing Club: </span>
                     <input className="catch-input" type="text" value={editFishingClub} onChange={editFishingClubInputHandler}/>

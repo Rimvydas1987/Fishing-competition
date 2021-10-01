@@ -18,7 +18,7 @@ import React, {useState} from 'react';
                     <span className = "text">g</span>
                 </div>
                 <div>
-                    <button className = "addCatch-button" onClick={()=>change(id, editInput)}>add</button>
+                    <button className = "addCatch-button" onClick={()=>change(id, editInput)}>add weight</button>
                     <button className = "edit-button" onClick={()=>open(id)}>edit</button>
                 </div>
             </div>);

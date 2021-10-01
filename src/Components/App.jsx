@@ -94,7 +94,7 @@ function App() {
 
         return (
             <>
-                <div>
+                <div className="cards-div">
                     <div className="registrationBoard">
                         <div>
                             <span className="participantsText">Name: </span>
@@ -108,10 +108,8 @@ function App() {
                         </div>
                         <button className="addParticipants-button" onClick={()=>addParticipant()}>Add Participant</button>
                     </div>
-                    <div className="">
-                        <div className="">
-                            {participants.map((b, i) => <Fisherman open={openEdit} key={b.id}  id={b.id} name={b.name} surname={b.surname} club={b.fishingClub} prize={b.catchWeight} change={changeWeight}/>)}
-                        </div>
+                    <div>
+                        {participants.map((b, i) => <Fisherman open={openEdit} key={b.id}  id={b.id} name={b.name} surname={b.surname} club={b.fishingClub} prize={b.catchWeight} change={changeWeight}/>)}
                     </div>
                 </div>
                 <Edit className = "" id={open} close={closeEdit} erase={deleteFisherman}  save={change}></Edit>
