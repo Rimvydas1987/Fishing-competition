@@ -61,44 +61,20 @@ function App() {
         localStorage.setItem('allParticipants', JSON.stringify(participantsCopy));
     }
 
-    const changeName = (id, name) => {
+    const change = (id, name, surname, fishingClub) => {
         const participantsCopy = participants.slice();
         for(let i = 0; i < participantsCopy.length; i++){
             if (participantsCopy[i].id == id) {
                 participantsCopy[i].name = name;
-
-                break;
-            }
-        }
-        setParticipants(participantsCopy)
-        localStorage.setItem('allParticipants', JSON.stringify(participantsCopy));
-    }
-
-    const changeSurname = (id, surname) => {
-        const participantsCopy = participants.slice();
-        for(let i = 0; i < participantsCopy.length; i++){
-            if (participantsCopy[i].id == id) {
-                participantsCopy[i].surname = surname;
-
-                break;
-            }
-        }
-        setParticipants(participantsCopy)
-        localStorage.setItem('allParticipants', JSON.stringify(participantsCopy));
-    }
-
-    const changefishingClub = (id, fishingClub) => {
-        const participantsCopy = participants.slice();
-        for(let i = 0; i < participantsCopy.length; i++){
-            if (participantsCopy[i].id == id) {
                 participantsCopy[i].fishingClub = fishingClub;
-
+                participantsCopy[i].surname = surname;
                 break;
             }
         }
         setParticipants(participantsCopy)
         localStorage.setItem('allParticipants', JSON.stringify(participantsCopy));
     }
+
 
     const nameInputHandler = (e) => {
         setNameInput(e.target.value)
@@ -139,7 +115,7 @@ function App() {
                         </div>
                     </div>
                 </div>
-                <Edit className = "" id={open} close={closeEdit} erase={deleteFisherman} /* name={writeName} surname={writeSurname} club={writeFishingClub}*/ save={changeName, changeSurname /* changefishingClub */}></Edit>
+                <Edit className = "" id={open} close={closeEdit} erase={deleteFisherman} /* name={writeName} surname={writeSurname} club={writeFishingClub}*/ save={change}></Edit>
             </>
         );
     }
