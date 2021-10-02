@@ -63,11 +63,10 @@ code {
   font-weight: bold;
   margin-top: 5px;
   float: left;
-  margin-left: 35px;
-
   outline: none;
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.479);
 }
+
 .delete-button:hover {
   background-color: #cf0202fb;
 }
@@ -166,15 +165,54 @@ code {
   width:310px;
 }
 .window {
-  width: 500px;
-  height: 200px;
+  width: 405px;
+  height: 115px;
   background-color: #33f50c;
   border: 1px solid black;
   border-radius: 10px;
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.479);
   position: absolute;
   margin-top: 200px;
+  padding: 15px;
 }
-.cards-div{
+.cards-div {
   position: absolute;
+}
+.window-buttons {
+  display: flex;
+  flex-direction: column;
+  margin-top: -105px;
+  margin-left: 296px;
+}
+.windNameInput {
+  width: 150px;
+  height: 20px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  margin-left: 48px;
+  border-radius: 5px;
+  border: 1px solid black;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.479);
+  text-align: center
+}
+.windSurnameInput {
+  width: 150px;
+  height: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 26px;
+  border-radius: 5px;
+  border: 1px solid black;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.479);
+  text-align: center
+}
+.windFishingClubInput {
+  width: 150px;
+  height: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  border: 1px solid black;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.479);
+  text-align: center
 }

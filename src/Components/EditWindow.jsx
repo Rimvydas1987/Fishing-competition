@@ -20,15 +20,21 @@ import React, {useState} from 'react';
         }
         return (  
             <div className = "window">
-                <div className="line">
-                    <span className = "text flex">Name: </span>
-                    <input className="catch-input" type="text" value={editName} onChange={editNameInputHandler}/>
-                    <span className = "text flex">Surname: </span>
-                    <input className="catch-input" type="text" value={editSurname} onChange={editSurnameInputHandler}/>
-                    <span className = "text flex">Fishing Club: </span>
-                    <input className="catch-input" type="text" value={editFishingClub} onChange={editFishingClubInputHandler}/>
+                <div className="">
+                    <div>
+                        <span className = "text">Name: </span>
+                        <input className="windNameInput" type="text" value={editName} onChange={editNameInputHandler}/>
+                    </div>
+                    <div>
+                        <span className = "text">Surname: </span>
+                        <input className="windSurnameInput" type="text" value={editSurname} onChange={editSurnameInputHandler}/>
+                    </div>
+                    <div>
+                        <span className = "text">Fishing Club: </span>
+                        <input className="windFishingClubInput" type="text" value={editFishingClub} onChange={editFishingClubInputHandler}/>
+                    </div>
                 </div>
-                <div>
+                <div className="window-buttons">
                     <button className = "edit-button" onClick={()=>save(id, editName, editSurname, editFishingClub)}>save</button>
                     <button className = "delete-button" onClick={()=>erase(id)}>delete</button>
                     <button className = "edit-button" onClick={()=>close(id)}>cancel</button>
