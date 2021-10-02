@@ -62,6 +62,7 @@ function App() {
     }
 
     const change = (id, name, surname, fishingClub) => {
+        setOpen(0);
         const participantsCopy = participants.slice();
         for(let i = 0; i < participantsCopy.length; i++){
             if (participantsCopy[i].id === id) {
