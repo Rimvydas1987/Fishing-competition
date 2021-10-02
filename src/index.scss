@@ -5,10 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  display: flex;
-  justify-content: center;
+/*   display: flex;
+  justify-content: center; */
   background-image: (url('./Pic/lake.jpg'));
-  //background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
   
@@ -19,6 +18,7 @@ code {
     monospace;
 }
 .background {
+  display: inline-block;
   width: 328px;
   height: 130px;
   margin: 30px;
@@ -171,9 +171,11 @@ code {
   border: 1px solid black;
   border-radius: 10px;
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.479);
-  position: absolute;
   margin-top: 200px;
   padding: 15px;
+  position: fixed;
+  top: 200px;
+  left: calc(50% - 218px);
 }
 .cards-div {
   position: absolute;

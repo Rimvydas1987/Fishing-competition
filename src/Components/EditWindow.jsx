@@ -20,7 +20,7 @@ import React, {useState} from 'react';
         }
         return (  
             <div className = "window">
-                <div className="">
+                <div>
                     <div>
                         <span className = "text">Name: </span>
                         <input className="windNameInput" type="text" value={editName} onChange={editNameInputHandler}/>
