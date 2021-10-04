@@ -95,25 +95,36 @@ function App() {
 
         return (
             <>
-                <div className="cards-div">
-                    <div className="registrationBoard">
-                        <div>
-                            <span className="participantsText">Name: </span>
-                            <input className="participantsInput" type="text" value={nameInput} onChange={nameInputHandler}/>
+                <div>
+                    <header>
+                        <div class="overlay">
+                            <h1>Fishing Competition</h1>
+                            <h3>Good time guaranteed</h3>
+                            <button class="main-button">HOME</button>
+                            <button class="main-button">REGISTRATION</button>
+                            <button class="main-button">LEADERBOARD</button>
                         </div>
-                            <span className="participantsText">Surname: </span>
-                            <input className="participantsInput" type="text" value={surnameInput} onChange={surnameInputHandler}/>
-                        <div>
-                            <span className="participantsText">Fishing Club: </span>
-                            <input className="participantsInput" type="text" value={fishingClubInput} onChange={fishingClubInputHandler}/>
+                    </header>
+                    <div className="cards-div">
+                        <div className="registrationBoard">
+                            <div>
+                                <span className="participantsText">Name: </span>
+                                <input className="participantsInput" type="text" value={nameInput} onChange={nameInputHandler}/>
+                            </div>
+                                <span className="participantsText">Surname: </span>
+                                <input className="participantsInput" type="text" value={surnameInput} onChange={surnameInputHandler}/>
+                            <div>
+                                <span className="participantsText">Fishing Club: </span>
+                                <input className="participantsInput" type="text" value={fishingClubInput} onChange={fishingClubInputHandler}/>
+                            </div>
+                            <button className="addParticipants-button" onClick={()=>addParticipant()}>Add Participant</button>
                         </div>
-                        <button className="addParticipants-button" onClick={()=>addParticipant()}>Add Participant</button>
+                        <div>
+                            {participants.map((b, i) => <Fisherman open={openEdit} key={b.id}  id={b.id} name={b.name} surname={b.surname} club={b.fishingClub} prize={b.catchWeight} change={changeWeight}/>)}
+                        </div>
                     </div>
-                    <div>
-                        {participants.map((b, i) => <Fisherman open={openEdit} key={b.id}  id={b.id} name={b.name} surname={b.surname} club={b.fishingClub} prize={b.catchWeight} change={changeWeight}/>)}
-                    </div>
+                    <Edit className = "" id={open} close={closeEdit} erase={deleteFisherman}  save={change}></Edit>
                 </div>
-                <Edit className = "" id={open} close={closeEdit} erase={deleteFisherman}  save={change}></Edit>
             </>
         );
     }
