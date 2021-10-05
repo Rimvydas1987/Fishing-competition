@@ -35,9 +35,9 @@ import React, {useState} from 'react';
                     </div>
                 </div>
                 <div className="window-buttons">
-                    <button className = "edit-button" onClick={()=>save(id, editName, editSurname, editFishingClub)}>save</button>
+                    <button className = "save-cancel-button" onClick={()=>save(id, editName, editSurname, editFishingClub)}>save</button>
                     <button className = "delete-button" onClick={()=>erase(id)}>delete</button>
-                    <button className = "edit-button" onClick={()=>close(id)}>cancel</button>
+                    <button className = "save-cancel-button" onClick={()=>close(id)}>cancel</button>
                 </div>
             </div>);
 }  

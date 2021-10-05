@@ -104,6 +104,29 @@ h3 {
   display: flex;
   justify-content: center;
 }
+.save-cancel-button{
+  width: 100px;
+  height: 30px;
+  background-color: rgba(1, 184, 1, 0.993);
+  border: solid 1px black;
+  border-radius: 5px;
+  cursor: pointer;
+  font-style: italic;
+  font-weight: bold;
+  margin-top: 5px;
+  float: left;
+  outline: none;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.479);
+}
+
+.save-cancel-button:hover {
+  background-color: rgb(3, 155, 3);
+}
+.save-cancel-button:active {
+  background-color: rgb(3, 114, 3);
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.479);
+  transform: translateY(4px);
+}
 
 .delete-button{
   width: 100px;
@@ -215,7 +238,13 @@ h3 {
 }
 .registrationBoard {
   margin: 30px 40px 30px 40px;
-  width:310px;
+  width: 310px;
+  position: relative;
+  left: calc(50% - 218px);
+  background-color: rgba(128, 128, 128, 0.795);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid black;
 }
 .window {
   width: 405px;
