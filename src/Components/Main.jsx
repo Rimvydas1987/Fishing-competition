@@ -118,10 +118,8 @@ function Main() {
                     <Switch>
                     <Route path={'/home'}>
                         <div className="cards-div">
-                            <AddCatch className = "" id={openEditCatch} close={closeEditCatch} saveCatch={saveCatch}></AddCatch>
-                            <div>
-                                {participants.map((b, i) => <Fisherman editCatch={openCatch} key={b.id}  id={b.id} name={b.name} surname={b.surname} club={b.fishingClub} prize={b.catchWeight}/>)}
-                            </div>
+                            <AddCatch id={openEditCatch} close={closeEditCatch} saveCatch={saveCatch}></AddCatch>
+                            {participants.map((b, i) => <Fisherman editCatch={openCatch} key={b.id}  id={b.id} name={b.name} surname={b.surname} club={b.fishingClub} prize={b.catchWeight}/>)}
                         </div>
                     </Route>
                     <Route path={'/registration'}>
@@ -138,7 +136,7 @@ function Main() {
                             </div>
                             <button className="addParticipants-button" onClick={()=>addParticipant()}>Add Participant</button>
                         </div>
-                        <Edit className = "" id={open} close={closeEdit} erase={deleteFisherman} save={change}></Edit>
+                        <Edit id={open} close={closeEdit} erase={deleteFisherman} save={change}></Edit>
                         {participants.map((b, i) => <FishermanReg open={openEdit} key={b.id}  id={b.id} name={b.name} surname={b.surname} club={b.fishingClub} prize={b.catchWeight}/>)}
                     </Route>
                     <Route path={'/leaderboard'}>

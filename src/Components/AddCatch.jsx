@@ -13,16 +13,16 @@ import React, {useState} from 'react';
             return null;
         }
         return (  
-            <div className = "window">
+            <div className = "windowCatch">
                 <div>
                     <div>
-                        <span className = "text">Name: </span>
-                        <input className="windNameInput" type="text" value={editCatch} onChange={editCatchInputHandler}/>
+                        <span>Weight: </span>
+                        <input className="catch-input" type="number" value={editCatch} onChange={editCatchInputHandler}/>
                     </div>
                 </div>
-                <div className="window-buttons">
-                    <button className = "edit-button" onClick={()=>saveCatch(id, editCatch)}>save</button>
-                    <button className = "edit-button" onClick={()=>close(id)}>cancel</button>
+                <div>
+                    <button className = "catch-button" onClick={()=>saveCatch(id, editCatch)}>Add</button>
+                    <button className = "catch-button" onClick={()=>close(id)}>Cancel</button>
                 </div>
             </div>);
 }  
