@@ -3,6 +3,8 @@ import { Link, Switch, Route } from 'react-router-dom';
 import Fisherman from './Fisherman';
 import getId from '../Shared/id';
 import Edit from './EditWindow';
+import FishermanReg from './FishermanReg';
+import AddCatch from './AddCatch';
 
 function Main() {
 
@@ -11,6 +13,7 @@ function Main() {
     const [surnameInput, setSurnameInput] = useState('');
     const [fishingClubInput, setFishingClubInput] = useState('');
     const [open, setOpen] = useState(0);
+    const [openEditCatch, setOpenEditCatch] = useState(0);
 
     useEffect(() => {
         const participantsCopy = JSON.parse(localStorage.getItem('allParticipants'));
@@ -32,18 +35,6 @@ function Main() {
         participantsCopy.push(fisherman);
         setParticipants(participantsCopy)
 
-        localStorage.setItem('allParticipants', JSON.stringify(participantsCopy));
-    }
-
-    const changeWeight = (id, weight) => {
-        const participantsCopy = participants.slice();
-        for(let i = 0; i < participantsCopy.length; i++){
-            if (participantsCopy[i].id === id) {
-                participantsCopy[i].catchWeight += parseInt(weight)/1000;
-                break;
-            }
-        }
-        setParticipants(participantsCopy)
         localStorage.setItem('allParticipants', JSON.stringify(participantsCopy));
     }
 
@@ -76,11 +67,11 @@ function Main() {
     }
 
     const saveCatch = (id, catchWeight) => {
-        setOpen(0);
+        setOpenEditCatch(0);
         const participantsCopy = participants.slice();
         for(let i = 0; i < participantsCopy.length; i++){
             if (participantsCopy[i].id === id) {
-                participantsCopy[i].catchWeight = catchWeight;
+                participantsCopy[i].catchWeight += parseInt(catchWeight)/1000;
                 break;
             }
         }
@@ -104,6 +95,13 @@ function Main() {
     const closeEdit = () => {
         setOpen(0);
     }
+    const openCatch = (id) => {
+        setOpenEditCatch(id);
+    }
+
+    const closeEditCatch = () => {
+        setOpenEditCatch(0);
+    }
 
         return (
             <>
@@ -120,8 +118,9 @@ function Main() {
                     <Switch>
                     <Route path={'/home'}>
                         <div className="cards-div">
+                            <AddCatch className = "" id={openEditCatch} close={closeEditCatch} saveCatch={saveCatch}></AddCatch>
                             <div>
-                                {participants.map((b, i) => <Fisherman open={openEdit} key={b.id}  id={b.id} name={b.name} surname={b.surname} club={b.fishingClub} prize={b.catchWeight} change={changeWeight}/>)}
+                                {participants.map((b, i) => <Fisherman editCatch={openCatch} key={b.id}  id={b.id} name={b.name} surname={b.surname} club={b.fishingClub} prize={b.catchWeight}/>)}
                             </div>
                         </div>
                     </Route>
@@ -139,7 +138,8 @@ function Main() {
                             </div>
                             <button className="addParticipants-button" onClick={()=>addParticipant()}>Add Participant</button>
                         </div>
-                    <Edit className = "" id={open} close={closeEdit} erase={deleteFisherman} save={change}></Edit>
+                        <Edit className = "" id={open} close={closeEdit} erase={deleteFisherman} save={change}></Edit>
+                        {participants.map((b, i) => <FishermanReg open={openEdit} key={b.id}  id={b.id} name={b.name} surname={b.surname} club={b.fishingClub} prize={b.catchWeight}/>)}
                     </Route>
                     <Route path={'/leaderboard'}>
                         <h6 style={{fontSize: "50px", display: 'flex', justifyContent: 'center', padding: "20px", backgroundColor: 'red'}}>LEADERBOARD on progress....</h6>
