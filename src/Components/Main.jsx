@@ -139,12 +139,12 @@ function Main() {
                             </div>
                             <button className="addParticipants-button" onClick={()=>addParticipant()}>Add Participant</button>
                         </div>
+                    <Edit className = "" id={open} close={closeEdit} erase={deleteFisherman} save={change}></Edit>
                     </Route>
                     <Route path={'/leaderboard'}>
 
                     </Route>
                     </Switch>
-                    <Edit className = "" id={open} close={closeEdit} erase={deleteFisherman}  save={change}></Edit>
                 </div>
             </>
         );
