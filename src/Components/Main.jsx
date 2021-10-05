@@ -40,10 +40,8 @@ function Main() {
         for(let i = 0; i < participantsCopy.length; i++){
             if (participantsCopy[i].id === id) {
                 participantsCopy[i].catchWeight += parseInt(weight)/1000;
-
                 break;
             }
-
         }
         setParticipants(participantsCopy)
         localStorage.setItem('allParticipants', JSON.stringify(participantsCopy));
@@ -70,6 +68,19 @@ function Main() {
                 participantsCopy[i].name = name;
                 participantsCopy[i].fishingClub = fishingClub;
                 participantsCopy[i].surname = surname;
+                break;
+            }
+        }
+        setParticipants(participantsCopy)
+        localStorage.setItem('allParticipants', JSON.stringify(participantsCopy));
+    }
+
+    const saveCatch = (id, catchWeight) => {
+        setOpen(0);
+        const participantsCopy = participants.slice();
+        for(let i = 0; i < participantsCopy.length; i++){
+            if (participantsCopy[i].id === id) {
+                participantsCopy[i].catchWeight = catchWeight;
                 break;
             }
         }
