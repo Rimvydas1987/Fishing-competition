@@ -142,7 +142,7 @@ function Main() {
                     <Edit className = "" id={open} close={closeEdit} erase={deleteFisherman} save={change}></Edit>
                     </Route>
                     <Route path={'/leaderboard'}>
-
+                        LEADERBOARD on progress....
                     </Route>
                     </Switch>
                 </div>
